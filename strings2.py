@@ -13,8 +13,10 @@ print(course2[2:-4])
 
 Email = """
 Hi Francis,
-This is the first email from python.
-Thanks you.
+This is the first email from python support Team.
+We will send up follow up emails in coming days.
+
+Thank you.
 
 """
 print(Email)
