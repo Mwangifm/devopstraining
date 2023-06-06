@@ -35,6 +35,6 @@ if has_good_credit and not has_criminal_record:
 #Comparison operators
 temperature = 30
 if temperature > 30:
-    print("Its a hot day")
+    print("It's a hot day")
 else:
     print("It's not a hot day")
