@@ -20,7 +20,7 @@ print(f"Down Payment: KES{down_payment}")
 
 #Logical operators
 
-has_high_income = True
+has_high_income = False
 has_good_credit = True
 has_criminal_record = False
 if has_high_income and has_good_credit:
