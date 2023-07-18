@@ -1,7 +1,9 @@
 # python-app.yml 
+name: my-cicd
+run-name: ${{ github.actor }} Actions Part 2
 on: 
   push: 
-    branches: [ dev ] 
+    branches: [ main ] 
     paths: 
     - 'factorial.py' 
     - 'myfunc.py' 
