@@ -4,7 +4,6 @@ on:
   push: 
     branches: [ main ] 
     paths: 
-    - 'factorial.py'
     - 'test_factorial.py' 
     - 'myfunc.py' 
  jobs: 
