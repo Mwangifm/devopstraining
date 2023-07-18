@@ -4,8 +4,10 @@ on:
   push: 
     branches: [ main ] 
     paths: 
+    - 'myfunc.py'  
+    - 'factorial.py'
     - 'test_factorial.py' 
-    - 'myfunc.py' 
+  
  jobs: 
   build: 
     runs-on: ubuntu-latest 
