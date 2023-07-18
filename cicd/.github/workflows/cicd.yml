@@ -4,24 +4,24 @@ on:
     branches: [ dev ] 
     paths: 
     - 'factorial.py' 
-    - 'lint.py' 
-    - ' pytest_test.py ' 
+    - 'myfunc.py' 
+    - 'test_factorial.py' 
  jobs: 
   build: 
     runs-on: ubuntu-latest 
     steps: 
     - uses: actions/checkout@v2 
-    - name: Set up Python 3.8 
+    - name: Set up Python 3.10.6
       uses: actions/setup-python@v2 
       with: 
-        python-version: 3.8 
+        python-version: 3.10.6
     - name: Install dependencies 
       run: | 
         python -m pip install --upgrade pip 
-        pip install pylint pytest 
-     - name: Lint with pylint 
+        pip install pytest 
+     - name: Lint with Pytest
       run: | 
-        python lint.py 
+        python myfunc.py 
      - name: Run pytest suite 
      run: | 
-        pytest pytest_test.py 
+        pytest test_factorial.py 
