@@ -1,4 +1,3 @@
-# python-app.yml 
 name: my-cicd
 run-name: ${{ github.actor }} Actions Part 2
 on: 
