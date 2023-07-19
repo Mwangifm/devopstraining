@@ -21,9 +21,9 @@ jobs:
       run: | 
         python3 -m pip install --upgrade pip 
         pip install pytest 
-     - name: Lint with Pytest
+    - name: Test myfunc
       run: | 
         pytest myfunc.py 
-     - name: Run pytest suite 
-     run: | 
+    - name: Test factorial 
+      run: | 
         pytest test_factorial.py 
