@@ -2,7 +2,7 @@ name: my-first-action
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  build:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
