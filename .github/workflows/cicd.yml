@@ -16,14 +16,10 @@ jobs:
     - uses: actions/setup-python@v3
       with: 
         python-version: 3.10.6
-    - name: Install dependencies 
-      run: | 
-        python3 -m pip install --upgrade pip 
-        pip install pytest 
-    - name: Lint with Pytest
-      run: | 
+    - run: | 
+          python3 -m pip install --upgrade pip 
+          pip install pytest 
+    - run: | 
         pytest myfunc.py 
-    - name: Run pytest suite 
-      run: | 
+    - run: | 
         pytest test_factorial.py 
-        
