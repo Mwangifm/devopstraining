@@ -12,14 +12,11 @@ jobs:
   build: 
     runs-on: ubuntu-latest 
     steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
       with: 
         python-version: 3.10.6
-    - run: | 
-          python3 -m pip install --upgrade pip 
-          pip install pytest 
-    - run: | 
-        pytest myfunc.py 
-    - run: | 
-        pytest test_factorial.py 
+    - run: python3 -m pip install --upgrade pip 
+    - run: pip install pytest 
+    - run: pytest myfunc.py 
+    - run: pytest test_factorial.py 
