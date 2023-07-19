@@ -9,7 +9,7 @@ on:
     - 'factorial.py'
     - 'test_factorial.py' 
 jobs: 
-  build: 
+  pytest: 
     runs-on: ubuntu-latest 
     steps: 
     - uses: actions/checkout@v2 
