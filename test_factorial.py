@@ -1,6 +1,6 @@
 from factorial import * 
 
-def test_1(): 
+def test_factorial(): 
 
     assert sum_factorial() == 68
 
