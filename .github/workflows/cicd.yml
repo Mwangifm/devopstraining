@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
       with: 
-        python-version: latest
+        python-version: 3.12.0-alpha.7
     - run: python3 -m pip install --upgrade pip 
     - run: pip install pytest 
     - run: pytest myfunc.py 
