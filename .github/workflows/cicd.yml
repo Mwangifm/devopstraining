@@ -9,7 +9,7 @@ on:
     - 'factorial.py'
     - 'test_factorial.py' 
 jobs: 
-  pytest: 
+  build: 
     runs-on: ubuntu-latest 
     steps: 
     - uses: actions/checkout@v2 
@@ -21,9 +21,9 @@ jobs:
       run: | 
         python3 -m pip install --upgrade pip 
         pip install pytest 
-    - name: Test myfunc
+     - name: Lint with Pytest
       run: | 
         pytest myfunc.py 
-    - name: Test factorial 
-      run: | 
+     - name: Run pytest suite 
+     run: | 
         pytest test_factorial.py 
