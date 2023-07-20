@@ -22,14 +22,15 @@ def sum_factorial():
 
         final_list.append(factorial(i))    
 
-    result=sum(final_list)    
+    result=sum(final_list)
     
     print("Final SUM = {}".format(result)) 
 
     return result
-#If __name__ == "__main__": 
 
-sum_factorial()  
+
+if __name__ == "__main__": 
+    sum_factorial()  
 
 
 # Outputs the following
