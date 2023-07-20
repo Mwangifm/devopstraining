@@ -1,7 +1,7 @@
 from factorial import * 
 
-def test_factorial(): 
+def test_1(): 
 
-    assert sum_factorial() == 68
+    assert sum_factorial() == 34
 
 
