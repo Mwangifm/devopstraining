@@ -1,0 +1,32 @@
+name: my-cicd
+run-name: ${{ github.actor }} ci-cd pipeline 1
+on: [push]
+jobs: 
+  build: 
+    runs-on: ubuntu-latest 
+    steps: 
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with: 
+        python-version: 3.12.0-alpha.7
+    - run: python3 -m pip install --upgrade pip 
+    - run: pip install pytest 
+    - run: pytest myfunc.py 
+    - run: pytest test_factorial.py 
+  deploy: 
+    needs: build 
+    name: Upload to Amazon S3 
+    runs-on: ubuntu-latest 
+    steps: 
+    - name: Checkout 
+      uses: actions/checkout@v2 
+    - name: Configure AWS credentials 
+      uses: aws-actions/configure-aws-credentials@v1 
+      with: 
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+        aws-region: us-east-1 
+    - name: Copy our python module to our S3 bucket with the AWS CLI 
+      run: | 
+        aws s3 cp factorial.py s3://'your_s3_bucket_name_goes_here' 
+        aws s3 ls s3://'your_s3_bucket_name_goes_here'
