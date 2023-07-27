@@ -1,5 +1,5 @@
 name: my-cicd
-run-name: ${{ github.actor }} ci-cd pipeline 1
+run-name: ${{ github.actor }} ci-cd pipeline 2
 on: [push]
 jobs: 
   build: 
@@ -28,5 +28,5 @@ jobs:
         aws-region: us-east-1 
     - name: Copy our python module to our S3 bucket with the AWS CLI 
       run: | 
-        aws s3 cp factorial.py s3://'your_s3_bucket_name_goes_here' 
-        aws s3 ls s3://'your_s3_bucket_name_goes_here'
+        aws s3 cp factorial.py s3://'77devops-bucket' 
+        aws s3 ls s3://'77devops-bucket'
