@@ -1,5 +1,5 @@
 name: My-CICD Build and Test
-run-name: ${{ github.actor }} CICD Build and Test
+run-name: ${{ github.actor }} ci-cd pipeline 1 - Build and Test
 on: [push]
 jobs: 
   build: 
